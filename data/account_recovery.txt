@@ -1,0 +1,17 @@
+Account Recovery Procedures
+Document Code: KB-REC-201
+Version: 1.4
+
+This document outlines the security procedures for recovering access to a user account when the primary email or credential set is lost.
+
+1. Identity Verification Requirements:
+To recover an account, the user must provide proof of identity. Acceptable proofs include:
+- The last 4 digits of the payment method on file.
+- The original signup date and registration location.
+- An authorized domain administrator confirmation.
+
+2. Lost Email Recovery Path:
+If a user no longer has access to their registered email address, they must submit a secondary email update request. This requires validation from a billing administrator or a notarized identity statement. The support team will process these requests within 2 business days.
+
+3. Session Revocation:
+Upon successful account recovery, all active browser sessions, OAuth authorizations, and API keys are automatically revoked to prevent unauthorized concurrent access.

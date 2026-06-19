@@ -1,0 +1,16 @@
+Billing Disputes Policy
+Document: KB-BILL-DISPUTE
+Status: Published
+
+This document outlines the policy and timelines for customer billing disputes and invoice reviews.
+
+1. Disputing an Invoice:
+Customers must notify billing support of any invoice errors or disputes within 30 days of the invoice date. Disputes filed after 30 days are not eligible for retroactive adjustments.
+
+2. Review Procedure & Timeline:
+- The Billing Team initiates an investigation within 24 hours of ticket receipt.
+- A resolution, adjustment, or formal decision will be delivered to the client within 5 to 7 business days.
+- During active disputes, the user's platform access will NOT be suspended, provided the undisputed portion of the bill is paid.
+
+3. Submission:
+To open a billing dispute, contact billing@platform.com with the invoice number, disputed amount, and justification.

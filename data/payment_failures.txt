@@ -1,0 +1,16 @@
+Payment Failures and Declined Cards
+Reference: KB-BILL-DECLINE
+
+If a payment attempt fails, the platform sends an email notice and flags the invoice.
+
+1. Common Decline Error Codes:
+- Insufficient Funds: The account has insufficient cash. Request the user to top up or use an alternate card.
+- Expired Card: The card's expiration date has passed. User must update card details.
+- Restrictive Lock: Bank blocked the transaction due to fraud detection. User must call their card issuer to clear the transaction.
+
+2. Retries:
+The billing system automatically retries failed invoice charges three times:
+- Retry 1: 3 days after initial failure.
+- Retry 2: 7 days after initial failure.
+- Retry 3: 10 days after initial failure.
+If all retries fail, the subscription is automatically downgraded, and platform access is restricted.

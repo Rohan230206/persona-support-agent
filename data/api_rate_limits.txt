@@ -1,0 +1,21 @@
+API Rate Limits and Throttling
+Document Code: KB-API-LIMITS
+
+To ensure service availability, all API keys are subject to rate limiting and request throttling.
+
+1. Default Rate Tiers:
+- Developer Sandbox: 60 requests per minute.
+- Professional Tier: 1000 requests per minute.
+- Enterprise Tier: 5000 requests per minute.
+
+2. Rate Limit Headers:
+Every API response contains metadata headers indicating current usage:
+- X-RateLimit-Limit: The maximum requests allowed in the window.
+- X-RateLimit-Remaining: The number of remaining requests allowed in the current window.
+- X-RateLimit-Reset: The Unix epoch time indicating when the current rate limit window resets.
+
+3. Exceeding Limits (HTTP 429):
+If rate limits are exceeded, the server returns an HTTP 429 Too Many Requests status code.
+The response payload is:
+{"error": "rate_limit_exceeded", "message": "Too many requests. Please try again after reset time."}
+Integrations must implement exponential backoff and read the X-RateLimit-Reset header.

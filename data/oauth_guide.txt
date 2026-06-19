@@ -1,0 +1,22 @@
+OAuth 2.0 Configuration and Integration
+Document Reference: KB-OAUTH-402
+
+This document explains how to set up OAuth 2.0 clients and scopes for application authorization.
+
+1. Generating Client Credentials:
+Navigate to Developer Console > OAuth Clients. Click 'Create Client'.
+The system will generate:
+- Client ID: A public identifier for your application.
+- Client Secret: A private key that must never be shared or exposed in client-side code.
+
+2. Supported OAuth Scopes:
+- read:users - Access user profiles.
+- write:users - Modify user details.
+- read:data - Read customer databases.
+- write:data - Write/edit customer database records.
+
+3. Authorization Code Flow:
+Applications must redirect users to:
+https://api.platform.com/oauth/authorize?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=read:users
+
+Exchange the returned authorization code for an Access Token by POSTing to /oauth/token.

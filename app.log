@@ -1,0 +1,474 @@
+[2026-06-19 01:10:14] WARNING [support_agent.__init__:49] GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_data_directory:152] Scanning data directory for ingestion: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'account_recovery.txt' into 4 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'account_recovery.txt' with 4 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'api_authentication.md' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'api_authentication.md' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'api_rate_limits.txt' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'api_rate_limits.txt' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'bearer_tokens.md' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'bearer_tokens.md' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'billing_disputes.txt' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'billing_disputes.txt' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'browser_cache_issues.md' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'browser_cache_issues.md' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'cookie_clearing.txt' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'cookie_clearing.txt' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'database_integration.md' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'database_integration.md' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'duplicate_charges.md' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'duplicate_charges.md' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'mfa_setup.md' into 4 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'mfa_setup.md' with 4 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'oauth_guide.txt' into 4 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'oauth_guide.txt' with 4 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.extract_text_from_pdf:83] Extracting text from PDF: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:10:14] INFO [support_agent.extract_text_from_pdf:95] Successfully extracted 1606 characters from C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'password_reset_guide.pdf' into 5 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'password_reset_guide.pdf' with 5 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'payment_failures.txt' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'payment_failures.txt' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'refund_policy.txt' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'refund_policy.txt' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'user_permissions.md' into 4 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'user_permissions.md' with 4 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:101] Splitting 'webhooks.md' into 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_document:113] Offline indexed 'webhooks.md' with 3 chunks.
+[2026-06-19 01:10:14] INFO [support_agent.ingest_data_directory:166] Ingestion complete. Newly indexed/updated 16 documents.
+[2026-06-19 01:10:14] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Where is the guide to clear cookies? It's been an hour and n...
+[2026-06-19 01:10:14] ERROR [support_agent.classify_customer_persona:31] GEMINI_API_KEY is not set. Cannot run classification.
+[2026-06-19 01:10:14] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Where is the guide to clear cookies? It's been an '
+[2026-06-19 01:10:14] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:28] WARNING [support_agent.__init__:49] GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_data_directory:152] Scanning data directory for ingestion: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'account_recovery.txt' into 4 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'account_recovery.txt' with 4 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'api_authentication.md' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'api_authentication.md' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'api_rate_limits.txt' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'api_rate_limits.txt' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'bearer_tokens.md' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'bearer_tokens.md' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'billing_disputes.txt' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'billing_disputes.txt' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'browser_cache_issues.md' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'browser_cache_issues.md' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'cookie_clearing.txt' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'cookie_clearing.txt' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'database_integration.md' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'database_integration.md' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'duplicate_charges.md' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'duplicate_charges.md' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'mfa_setup.md' into 4 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'mfa_setup.md' with 4 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'oauth_guide.txt' into 4 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'oauth_guide.txt' with 4 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.extract_text_from_pdf:83] Extracting text from PDF: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:10:28] INFO [support_agent.extract_text_from_pdf:95] Successfully extracted 1606 characters from C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'password_reset_guide.pdf' into 5 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'password_reset_guide.pdf' with 5 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'payment_failures.txt' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'payment_failures.txt' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'refund_policy.txt' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'refund_policy.txt' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'user_permissions.md' into 4 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'user_permissions.md' with 4 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:101] Splitting 'webhooks.md' into 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_document:113] Offline indexed 'webhooks.md' with 3 chunks.
+[2026-06-19 01:10:28] INFO [support_agent.ingest_data_directory:166] Ingestion complete. Newly indexed/updated 16 documents.
+[2026-06-19 01:10:28] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Where is the guide to clear cookies? It's been an hour and n...
+[2026-06-19 01:10:28] ERROR [support_agent.classify_customer_persona:31] GEMINI_API_KEY is not set. Cannot run classification.
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Where is the guide to clear cookies? It's been an '
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:28] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Frustrated User' using 3 chunks.
+[2026-06-19 01:10:28] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:10:28] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: What are the header parameter requirements for your bearer t...
+[2026-06-19 01:10:28] ERROR [support_agent.classify_customer_persona:31] GEMINI_API_KEY is not set. Cannot run classification.
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'What are the header parameter requirements for you'
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:28] INFO [support_agent.check_repeated_frustration:47] Repeated frustration detected. Triggering escalation.
+[2026-06-19 01:10:28] INFO [support_agent.evaluate_escalation:163] Escalating: Repeated user frustration detected over consecutive interactions.
+[2026-06-19 01:10:28] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:10:28] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:10:28] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Our operational uptime is decreasing. We need a timeline of ...
+[2026-06-19 01:10:28] ERROR [support_agent.classify_customer_persona:31] GEMINI_API_KEY is not set. Cannot run classification.
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Our operational uptime is decreasing. We need a ti'
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:28] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:10:28] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:10:28] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:10:28] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: I'm experiencing an issue with your database integration tha...
+[2026-06-19 01:10:28] ERROR [support_agent.classify_customer_persona:31] GEMINI_API_KEY is not set. Cannot run classification.
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'I'm experiencing an issue with your database integ'
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:28] INFO [support_agent.check_repeated_frustration:47] Repeated frustration detected. Triggering escalation.
+[2026-06-19 01:10:28] INFO [support_agent.evaluate_escalation:163] Escalating: Repeated user frustration detected over consecutive interactions.
+[2026-06-19 01:10:28] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:10:28] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:10:28] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: My billing statement has unexpected duplicate charges. I dem...
+[2026-06-19 01:10:28] ERROR [support_agent.classify_customer_persona:31] GEMINI_API_KEY is not set. Cannot run classification.
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'My billing statement has unexpected duplicate char'
+[2026-06-19 01:10:28] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:28] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:10:28] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:10:28] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:10:43] WARNING [support_agent.__init__:49] GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_data_directory:152] Scanning data directory for ingestion: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'account_recovery.txt' into 4 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'account_recovery.txt' with 4 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'api_authentication.md' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'api_authentication.md' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'api_rate_limits.txt' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'api_rate_limits.txt' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'bearer_tokens.md' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'bearer_tokens.md' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'billing_disputes.txt' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'billing_disputes.txt' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'browser_cache_issues.md' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'browser_cache_issues.md' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'cookie_clearing.txt' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'cookie_clearing.txt' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'database_integration.md' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'database_integration.md' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'duplicate_charges.md' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'duplicate_charges.md' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'mfa_setup.md' into 4 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'mfa_setup.md' with 4 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'oauth_guide.txt' into 4 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'oauth_guide.txt' with 4 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.extract_text_from_pdf:83] Extracting text from PDF: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:10:43] INFO [support_agent.extract_text_from_pdf:95] Successfully extracted 1606 characters from C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'password_reset_guide.pdf' into 5 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'password_reset_guide.pdf' with 5 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'payment_failures.txt' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'payment_failures.txt' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'refund_policy.txt' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'refund_policy.txt' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'user_permissions.md' into 4 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'user_permissions.md' with 4 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:101] Splitting 'webhooks.md' into 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_document:113] Offline indexed 'webhooks.md' with 3 chunks.
+[2026-06-19 01:10:43] INFO [support_agent.ingest_data_directory:166] Ingestion complete. Newly indexed/updated 16 documents.
+[2026-06-19 01:10:43] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Where is the guide to clear cookies? It's been an hour and n...
+[2026-06-19 01:10:43] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Where is the guide to clear cookies? It's been an '
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:43] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Frustrated User' using 3 chunks.
+[2026-06-19 01:10:43] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:10:43] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: What are the header parameter requirements for your bearer t...
+[2026-06-19 01:10:43] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'What are the header parameter requirements for you'
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:43] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Technical Expert' using 3 chunks.
+[2026-06-19 01:10:43] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:10:43] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Our operational uptime is decreasing. We need a timeline of ...
+[2026-06-19 01:10:43] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Our operational uptime is decreasing. We need a ti'
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:43] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:10:43] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:10:43] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:10:43] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: I'm experiencing an issue with your database integration tha...
+[2026-06-19 01:10:43] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'I'm experiencing an issue with your database integ'
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:43] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Technical Expert' using 3 chunks.
+[2026-06-19 01:10:43] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:10:43] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: My billing statement has unexpected duplicate charges. I dem...
+[2026-06-19 01:10:43] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'My billing statement has unexpected duplicate char'
+[2026-06-19 01:10:43] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:10:43] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:10:43] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:10:43] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:19:46] WARNING [support_agent.__init__:49] GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_data_directory:152] Scanning data directory for ingestion: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'account_recovery.txt' into 4 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'account_recovery.txt' with 4 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'api_authentication.md' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'api_authentication.md' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'api_rate_limits.txt' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'api_rate_limits.txt' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'bearer_tokens.md' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'bearer_tokens.md' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'billing_disputes.txt' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'billing_disputes.txt' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'browser_cache_issues.md' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'browser_cache_issues.md' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'cookie_clearing.txt' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'cookie_clearing.txt' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'database_integration.md' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'database_integration.md' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'duplicate_charges.md' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'duplicate_charges.md' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'mfa_setup.md' into 4 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'mfa_setup.md' with 4 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'oauth_guide.txt' into 4 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'oauth_guide.txt' with 4 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.extract_text_from_pdf:83] Extracting text from PDF: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:19:46] INFO [support_agent.extract_text_from_pdf:95] Successfully extracted 1606 characters from C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'password_reset_guide.pdf' into 5 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'password_reset_guide.pdf' with 5 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'payment_failures.txt' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'payment_failures.txt' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'refund_policy.txt' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'refund_policy.txt' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'user_permissions.md' into 4 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'user_permissions.md' with 4 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:101] Splitting 'webhooks.md' into 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_document:113] Offline indexed 'webhooks.md' with 3 chunks.
+[2026-06-19 01:19:46] INFO [support_agent.ingest_data_directory:166] Ingestion complete. Newly indexed/updated 16 documents.
+[2026-06-19 01:19:46] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Where is the guide to clear cookies? It's been an hour and n...
+[2026-06-19 01:19:46] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Where is the guide to clear cookies? It's been an '
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:19:46] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Frustrated User' using 3 chunks.
+[2026-06-19 01:19:46] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:19:46] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: What are the header parameter requirements for your bearer t...
+[2026-06-19 01:19:46] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'What are the header parameter requirements for you'
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:19:46] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Technical Expert' using 3 chunks.
+[2026-06-19 01:19:46] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:19:46] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Our operational uptime is decreasing. We need a timeline of ...
+[2026-06-19 01:19:46] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Our operational uptime is decreasing. We need a ti'
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:19:46] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:19:46] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:19:46] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:19:46] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: I'm experiencing an issue with your database integration tha...
+[2026-06-19 01:19:46] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'I'm experiencing an issue with your database integ'
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:19:46] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Technical Expert' using 3 chunks.
+[2026-06-19 01:19:46] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:19:46] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: My billing statement has unexpected duplicate charges. I dem...
+[2026-06-19 01:19:46] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'My billing statement has unexpected duplicate char'
+[2026-06-19 01:19:46] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:19:46] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:19:46] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:19:46] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:21:20] WARNING [support_agent.<module>:19] GEMINI_API_KEY is not configured. Please add it to your environment or .env file.
+[2026-06-19 01:21:20] WARNING [support_agent.__init__:49] GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_data_directory:152] Scanning data directory for ingestion: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'account_recovery.txt' into 4 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'account_recovery.txt' with 4 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'api_authentication.md' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'api_authentication.md' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'api_rate_limits.txt' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'api_rate_limits.txt' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'bearer_tokens.md' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'bearer_tokens.md' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'billing_disputes.txt' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'billing_disputes.txt' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'browser_cache_issues.md' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'browser_cache_issues.md' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'cookie_clearing.txt' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'cookie_clearing.txt' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'database_integration.md' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'database_integration.md' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'duplicate_charges.md' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'duplicate_charges.md' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'mfa_setup.md' into 4 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'mfa_setup.md' with 4 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'oauth_guide.txt' into 4 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'oauth_guide.txt' with 4 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.extract_text_from_pdf:83] Extracting text from PDF: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:21:20] INFO [support_agent.extract_text_from_pdf:95] Successfully extracted 1606 characters from C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'password_reset_guide.pdf' into 5 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'password_reset_guide.pdf' with 5 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'payment_failures.txt' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'payment_failures.txt' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'refund_policy.txt' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'refund_policy.txt' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'user_permissions.md' into 4 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'user_permissions.md' with 4 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:101] Splitting 'webhooks.md' into 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_document:113] Offline indexed 'webhooks.md' with 3 chunks.
+[2026-06-19 01:21:20] INFO [support_agent.ingest_data_directory:166] Ingestion complete. Newly indexed/updated 16 documents.
+[2026-06-19 01:22:35] WARNING [support_agent.<module>:19] GEMINI_API_KEY is not configured. Please add it to your environment or .env file.
+[2026-06-19 01:22:35] WARNING [support_agent.__init__:49] GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_data_directory:152] Scanning data directory for ingestion: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'account_recovery.txt' into 4 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'account_recovery.txt' with 4 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'api_authentication.md' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'api_authentication.md' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'api_rate_limits.txt' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'api_rate_limits.txt' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'bearer_tokens.md' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'bearer_tokens.md' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'billing_disputes.txt' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'billing_disputes.txt' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'browser_cache_issues.md' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'browser_cache_issues.md' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'cookie_clearing.txt' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'cookie_clearing.txt' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'database_integration.md' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'database_integration.md' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'duplicate_charges.md' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'duplicate_charges.md' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'mfa_setup.md' into 4 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'mfa_setup.md' with 4 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'oauth_guide.txt' into 4 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'oauth_guide.txt' with 4 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.extract_text_from_pdf:83] Extracting text from PDF: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:22:35] INFO [support_agent.extract_text_from_pdf:95] Successfully extracted 1606 characters from C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'password_reset_guide.pdf' into 5 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'password_reset_guide.pdf' with 5 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'payment_failures.txt' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'payment_failures.txt' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'refund_policy.txt' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'refund_policy.txt' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'user_permissions.md' into 4 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'user_permissions.md' with 4 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:101] Splitting 'webhooks.md' into 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_document:113] Offline indexed 'webhooks.md' with 3 chunks.
+[2026-06-19 01:22:35] INFO [support_agent.ingest_data_directory:166] Ingestion complete. Newly indexed/updated 16 documents.
+[2026-06-19 01:23:08] WARNING [support_agent.<module>:19] GEMINI_API_KEY is not configured. Please add it to your environment or .env file.
+[2026-06-19 01:23:08] WARNING [support_agent.__init__:49] GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_data_directory:152] Scanning data directory for ingestion: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'account_recovery.txt' into 4 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'account_recovery.txt' with 4 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'api_authentication.md' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'api_authentication.md' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'api_rate_limits.txt' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'api_rate_limits.txt' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'bearer_tokens.md' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'bearer_tokens.md' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'billing_disputes.txt' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'billing_disputes.txt' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'browser_cache_issues.md' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'browser_cache_issues.md' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'cookie_clearing.txt' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'cookie_clearing.txt' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'database_integration.md' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'database_integration.md' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'duplicate_charges.md' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'duplicate_charges.md' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'mfa_setup.md' into 4 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'mfa_setup.md' with 4 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'oauth_guide.txt' into 4 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'oauth_guide.txt' with 4 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.extract_text_from_pdf:83] Extracting text from PDF: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:23:08] INFO [support_agent.extract_text_from_pdf:95] Successfully extracted 1606 characters from C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'password_reset_guide.pdf' into 5 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'password_reset_guide.pdf' with 5 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'payment_failures.txt' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'payment_failures.txt' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'refund_policy.txt' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'refund_policy.txt' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'user_permissions.md' into 4 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'user_permissions.md' with 4 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:101] Splitting 'webhooks.md' into 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_document:113] Offline indexed 'webhooks.md' with 3 chunks.
+[2026-06-19 01:23:08] INFO [support_agent.ingest_data_directory:166] Ingestion complete. Newly indexed/updated 16 documents.
+[2026-06-19 01:34:46] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: "Where is the guide to clear cookies? It's been an hour and ...
+[2026-06-19 01:34:46] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:34:46] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: '"Where is the guide to clear cookies? It's been an'
+[2026-06-19 01:34:46] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:34:46] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Frustrated User' using 3 chunks.
+[2026-06-19 01:34:46] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:35:12] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Where is the guide to clear cookies? It's been an hour and n...
+[2026-06-19 01:35:12] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:35:12] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Where is the guide to clear cookies? It's been an '
+[2026-06-19 01:35:12] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:35:12] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Frustrated User' using 3 chunks.
+[2026-06-19 01:35:12] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:40:07] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: What are the header parameter requirements for your bearer t...
+[2026-06-19 01:40:07] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:40:07] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'What are the header parameter requirements for you'
+[2026-06-19 01:40:07] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:40:07] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Technical Expert' using 3 chunks.
+[2026-06-19 01:40:07] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:41:14] WARNING [support_agent.<module>:19] GEMINI_API_KEY is not configured. Please add it to your environment or .env file.
+[2026-06-19 01:41:14] WARNING [support_agent.__init__:49] GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_data_directory:152] Scanning data directory for ingestion: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'account_recovery.txt' into 4 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'account_recovery.txt' with 4 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'api_authentication.md' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'api_authentication.md' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'api_rate_limits.txt' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'api_rate_limits.txt' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'bearer_tokens.md' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'bearer_tokens.md' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'billing_disputes.txt' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'billing_disputes.txt' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'browser_cache_issues.md' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'browser_cache_issues.md' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'cookie_clearing.txt' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'cookie_clearing.txt' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'database_integration.md' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'database_integration.md' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'duplicate_charges.md' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'duplicate_charges.md' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'mfa_setup.md' into 4 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'mfa_setup.md' with 4 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'oauth_guide.txt' into 4 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'oauth_guide.txt' with 4 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.extract_text_from_pdf:83] Extracting text from PDF: C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:41:14] INFO [support_agent.extract_text_from_pdf:95] Successfully extracted 1606 characters from C:\Users\saiir\OneDrive\intership work\persona-support-agent\data\password_reset_guide.pdf
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'password_reset_guide.pdf' into 5 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'password_reset_guide.pdf' with 5 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'payment_failures.txt' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'payment_failures.txt' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'refund_policy.txt' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'refund_policy.txt' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'user_permissions.md' into 4 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'user_permissions.md' with 4 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:101] Splitting 'webhooks.md' into 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_document:113] Offline indexed 'webhooks.md' with 3 chunks.
+[2026-06-19 01:41:14] INFO [support_agent.ingest_data_directory:166] Ingestion complete. Newly indexed/updated 16 documents.
+[2026-06-19 01:43:02] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: What are the header parameter requirements for your bearer t...
+[2026-06-19 01:43:02] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:43:02] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'What are the header parameter requirements for you'
+[2026-06-19 01:43:02] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:43:02] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Technical Expert' using 3 chunks.
+[2026-06-19 01:43:02] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:44:02] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: I'm experiencing an issue with your database integration tha...
+[2026-06-19 01:44:02] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:44:02] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'I'm experiencing an issue with your database integ'
+[2026-06-19 01:44:02] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:44:02] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Technical Expert' using 3 chunks.
+[2026-06-19 01:44:02] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 01:44:57] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: My billing statement has unexpected duplicate charges. I dem...
+[2026-06-19 01:44:57] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:44:57] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'My billing statement has unexpected duplicate char'
+[2026-06-19 01:44:57] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:44:57] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:44:57] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:44:57] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:45:26] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: "My billing statement has unexpected duplicate charges. I de...
+[2026-06-19 01:45:26] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:45:26] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: '"My billing statement has unexpected duplicate cha'
+[2026-06-19 01:45:26] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:45:26] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:45:26] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:45:26] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:45:47] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: "My billing statement has unexpected duplicate charges. I de...
+[2026-06-19 01:45:47] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:45:47] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: '"My billing statement has unexpected duplicate cha'
+[2026-06-19 01:45:47] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:45:47] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:45:47] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:45:47] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 01:47:28] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: "Our operational uptime is decreasing. We need a timeline of...
+[2026-06-19 01:47:28] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 01:47:28] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: '"Our operational uptime is decreasing. We need a t'
+[2026-06-19 01:47:28] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 01:47:28] INFO [support_agent.evaluate_escalation:156] Escalating: Query contains sensitive keywords. Triggered by: Contains sensitive keyword: 'billing'.
+[2026-06-19 01:47:28] INFO [support_agent.generate_handoff_json:62] Generating structured handoff report via Gemini...
+[2026-06-19 01:47:28] ERROR [support_agent.generate_handoff_json:65] GEMINI_API_KEY missing. Constructing static handoff JSON.
+[2026-06-19 02:24:07] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: What are the header parameter requirements for Bearer token ...
+[2026-06-19 02:24:07] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 02:24:07] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'What are the header parameter requirements for Bea'
+[2026-06-19 02:24:07] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 02:24:07] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Technical Expert' using 3 chunks.
+[2026-06-19 02:24:07] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.
+[2026-06-19 02:34:43] INFO [support_agent.classify_customer_persona:28] Classifying persona for message: Are all files present?...
+[2026-06-19 02:34:43] WARNING [support_agent.classify_customer_persona:31] GEMINI_API_KEY not set. Using rule-based offline classification fallback.
+[2026-06-19 02:34:43] INFO [support_agent.retrieve_context:173] Retrieving top 3 contexts for query: 'Are all files present?'
+[2026-06-19 02:34:43] INFO [support_agent.retrieve_context:203] [Offline] Retrieved 3 relevant contexts.
+[2026-06-19 02:34:43] INFO [support_agent.generate_adapted_response:20] Generating response for persona: 'Frustrated User' using 3 chunks.
+[2026-06-19 02:34:43] WARNING [support_agent.generate_adapted_response:32] GEMINI_API_KEY is missing. Using offline generation logic.

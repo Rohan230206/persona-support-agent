@@ -1,0 +1,18 @@
+Troubleshooting Authentication Loops and Cookies
+Document: KB-COOKIE-CLEAR
+
+If you are stuck in a continuous redirect loop or login screen refresh, stale authorization cookies must be cleared.
+
+1. Chrome Instructions:
+- Click the pad lock icon in the URL address bar.
+- Select 'Site Settings' or 'Cookies and site data'.
+- Click 'Manage cookies and site data'.
+- Click the trash icon next to platform.com to remove the session cookies.
+- Refresh the browser and log in again.
+
+2. Firefox Instructions:
+- Click the shield icon in the address bar.
+- Click 'Clear cookies and site data' button.
+- Confirm deletion, reload page, and re-login.
+
+Clearing cookies resolves 95% of redirect loop errors.

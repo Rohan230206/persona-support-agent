@@ -1,0 +1,16 @@
+Platform Refund Policy
+Document Code: KB-BILL-REFUND
+
+This policy explains refund eligibility criteria and standard processing timelines.
+
+1. Eligibility:
+- Subscription plans are billed in advance and are non-refundable except in cases of service outages exceeding our SLA agreement (99.9% uptime).
+- Credit balances are eligible for refund upon request if the account is closed in good standing.
+
+2. Refund Processing Time:
+Once a refund is approved by the Billing Administrator, the funds are credited back to the original payment method:
+- Credit Card Refunds: Take 5 to 10 business days to appear on the bank statement.
+- Bank Transfer/ACH: Take 7 to 14 business days to clear.
+
+3. Chargebacks:
+If a customer initiates a chargeback or payment dispute with their bank, the associated platform account is immediately suspended pending verification.
