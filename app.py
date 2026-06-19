@@ -315,5 +315,6 @@ with gr.Blocks(title="Persona-Adaptive Support Agent") as demo:
     )
 
 if __name__ == "__main__":
-    # Launch app locally
-    demo.launch(server_name="127.0.0.1", server_port=7860, css=custom_css)
+    # Bind to 0.0.0.0 for container deployments and resolve port dynamically
+    port = int(os.environ.get("PORT", 7860))
+    demo.launch(server_name="0.0.0.0", server_port=port, css=custom_css)
