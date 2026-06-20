@@ -134,7 +134,6 @@ class PersonaClassification(BaseModel):
         description="Brief explanation of the linguistic cues, sentiment, or tone that led to this classification."
     )
 
-@retry_with_backoff(max_retries=3, initial_delay=1.0)
 def classify_customer_persona(user_message: str) -> Dict[str, Any]:
     """Analyzes the user's message and classifies it into exactly one of three target personas."""
     logger.info(f"Classifying persona for message: {user_message[:60]}...")
@@ -166,7 +165,7 @@ def classify_customer_persona(user_message: str) -> Dict[str, Any]:
             "reasoning": "[Offline Rule] Defaulting to Frustrated User."
         }
         
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    client = genai.Client(api_key=GEMINI_API_KEY, http_options={"timeout": 5.0})
     system_instruction = (
         "You are an advanced classification engine. Your task is to analyze the "
         "sentiment, vocabulary, and tone of an incoming support message and classify "
@@ -246,7 +245,7 @@ class LocalRAGPipeline:
             return
             
         logger.info(f"Initializing persistent ChromaDB client at: {db_dir}")
-        self.client = genai.Client(api_key=GEMINI_API_KEY)
+        self.client = genai.Client(api_key=GEMINI_API_KEY, http_options={"timeout": 5.0})
         self.embedding_function = GeminiEmbeddingFunction(self.client)
         self.chroma_client = chromadb.PersistentClient(path=db_dir)
         
@@ -397,7 +396,6 @@ def check_repeated_frustration(session_personas: List[str], current_persona: str
         return True
     return False
 
-@retry_with_backoff(max_retries=3, initial_delay=1.0)
 def generate_handoff_json(query: str, persona: str, retrieved_sources: List[str], confidence_score: float) -> Dict[str, Any]:
     """Calls Gemini to generate a structured JSON handoff report."""
     logger.info("Generating structured handoff report via Gemini...")
@@ -410,7 +408,7 @@ def generate_handoff_json(query: str, persona: str, retrieved_sources: List[str]
             "recommended_action": "Manually review the user request and contact customer."
         }
         
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    client = genai.Client(api_key=GEMINI_API_KEY, http_options={"timeout": 5.0})
     system_instruction = (
         "You are a customer support triage agent. Generate a detailed, professional "
         "handoff report for a human agent. Explain the customer's problem clearly in the "
@@ -482,7 +480,6 @@ def evaluate_escalation(
 # ==========================================
 # 6. RESPONSE GENERATOR SECTION
 # ==========================================
-@retry_with_backoff(max_retries=3, initial_delay=1.0)
 def generate_adapted_response(query: str, persona: str, context_chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
     """Generates response matching user persona, grounded in context."""
     if not context_chunks:
@@ -568,7 +565,7 @@ def generate_adapted_response(query: str, persona: str, context_chunks: List[Dic
     )
     
     prompt = f"FACTUAL CONTEXT DOCUMENTS:\n{context_text}\n\nUSER QUERY: {query}\n"
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    client = genai.Client(api_key=GEMINI_API_KEY, http_options={"timeout": 5.0})
     
     try:
         response = client.models.generate_content(
@@ -613,14 +610,39 @@ except Exception as e:
     pipeline = None
 
 def process_query(message: str, history: list, session_personas: list):
+    if history is None:
+        history = []
+    if session_personas is None:
+        session_personas = []
+
+    # Standardize history to a list of lists format to prevent serialization issues
+    clean_history = []
+    if history:
+        if isinstance(history[0], dict):
+            temp_user = None
+            for msg in history:
+                role = msg.get("role")
+                content = msg.get("content", "")
+                if role == "user":
+                    temp_user = content
+                elif role == "assistant":
+                    if temp_user is not None:
+                        clean_history.append([temp_user, content])
+                        temp_user = None
+                    else:
+                        clean_history.append(["", content])
+            if temp_user is not None:
+                clean_history.append([temp_user, ""])
+        else:
+            clean_history = [list(item) for item in history]
+
     if not message.strip():
-        return "", history, session_personas, "N/A", 0.0, 0.0, "✅ Normal Operations", {}, "*No document chunks retrieved.*"
+        return "", clean_history, session_personas, "N/A", 0.0, 0.0, "✅ Normal Operations", {}, "*No document chunks retrieved.*"
 
     if pipeline is None:
         err_msg = "System is running in offline mode. Please configure GEMINI_API_KEY."
-        history.append({"role": "user", "content": message})
-        history.append({"role": "assistant", "content": err_msg})
-        return "", history, session_personas, "N/A", 0.0, 0.0, "🚨 Handoff Required", {"error": err_msg}, "*No document chunks retrieved.*"
+        clean_history.append([message, err_msg])
+        return "", clean_history, session_personas, "N/A", 0.0, 0.0, "🚨 Handoff Required", {"error": err_msg}, "*No document chunks retrieved.*"
 
     try:
         classification = classify_customer_persona(message)
@@ -661,17 +683,15 @@ def process_query(message: str, history: list, session_personas: list):
                 final_response = gen_result.get("response", "")
 
         session_personas.append(persona)
-        history.append({"role": "user", "content": message})
-        history.append({"role": "assistant", "content": final_response})
+        clean_history.append([message, final_response])
         handoff_display = handoff_json if handoff_json else {}
         
-        return "", history, session_personas, persona, conf, top_score, escalation_status, handoff_display, sources_md
+        return "", clean_history, session_personas, persona, conf, top_score, escalation_status, handoff_display, sources_md
     except Exception as e:
         logger.error(f"Error executing user query processing: {e}")
         err_msg = f"System Error: {e}"
-        history.append({"role": "user", "content": message})
-        history.append({"role": "assistant", "content": "An unexpected system error occurred. We are routing you to support."})
-        return "", history, session_personas, "N/A", 0.0, 0.0, "🚨 Handoff Required", {"error": err_msg}, "*No document chunks retrieved.*"
+        clean_history.append([message, "An unexpected system error occurred. We are routing you to support."])
+        return "", clean_history, session_personas, "N/A", 0.0, 0.0, "🚨 Handoff Required", {"error": err_msg}, "*No document chunks retrieved.*"
 
 def reset_session():
     return [], [], "N/A", 0.0, 0.0, "✅ Normal Operations", {}, "*No document chunks retrieved.*"
@@ -732,4 +752,5 @@ with gr.Blocks(title="Persona-Adaptive Support Agent") as demo:
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 7860))
-    demo.launch(server_name="0.0.0.0", server_port=port)
+    is_spaces = bool(os.environ.get("SPACE_ID"))
+    demo.launch(server_name="0.0.0.0", server_port=port, share=not is_spaces)
