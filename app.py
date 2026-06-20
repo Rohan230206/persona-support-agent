@@ -615,33 +615,26 @@ def process_query(message: str, history: list, session_personas: list):
     if session_personas is None:
         session_personas = []
 
-    # Standardize history to a list of lists format to prevent serialization issues
+    # Standardize history to a list of dicts format (messages format) to prevent serialization issues
     clean_history = []
     if history:
-        if isinstance(history[0], dict):
-            temp_user = None
-            for msg in history:
-                role = msg.get("role")
-                content = msg.get("content", "")
-                if role == "user":
-                    temp_user = content
-                elif role == "assistant":
-                    if temp_user is not None:
-                        clean_history.append([temp_user, content])
-                        temp_user = None
-                    else:
-                        clean_history.append(["", content])
-            if temp_user is not None:
-                clean_history.append([temp_user, ""])
-        else:
-            clean_history = [list(item) for item in history]
+        for item in history:
+            if isinstance(item, dict):
+                clean_history.append({
+                    "role": item.get("role", "user"),
+                    "content": item.get("content", "")
+                })
+            elif isinstance(item, (list, tuple)) and len(item) == 2:
+                clean_history.append({"role": "user", "content": item[0]})
+                clean_history.append({"role": "assistant", "content": item[1]})
 
     if not message.strip():
         return "", clean_history, session_personas, "N/A", 0.0, 0.0, "✅ Normal Operations", {}, "*No document chunks retrieved.*"
 
     if pipeline is None:
         err_msg = "System is running in offline mode. Please configure GEMINI_API_KEY."
-        clean_history.append([message, err_msg])
+        clean_history.append({"role": "user", "content": message})
+        clean_history.append({"role": "assistant", "content": err_msg})
         return "", clean_history, session_personas, "N/A", 0.0, 0.0, "🚨 Handoff Required", {"error": err_msg}, "*No document chunks retrieved.*"
 
     try:
@@ -683,14 +676,16 @@ def process_query(message: str, history: list, session_personas: list):
                 final_response = gen_result.get("response", "")
 
         session_personas.append(persona)
-        clean_history.append([message, final_response])
+        clean_history.append({"role": "user", "content": message})
+        clean_history.append({"role": "assistant", "content": final_response})
         handoff_display = handoff_json if handoff_json else {}
         
         return "", clean_history, session_personas, persona, conf, top_score, escalation_status, handoff_display, sources_md
     except Exception as e:
         logger.error(f"Error executing user query processing: {e}")
         err_msg = f"System Error: {e}"
-        clean_history.append([message, "An unexpected system error occurred. We are routing you to support."])
+        clean_history.append({"role": "user", "content": message})
+        clean_history.append({"role": "assistant", "content": "An unexpected system error occurred. We are routing you to support."})
         return "", clean_history, session_personas, "N/A", 0.0, 0.0, "🚨 Handoff Required", {"error": err_msg}, "*No document chunks retrieved.*"
 
 def reset_session():
