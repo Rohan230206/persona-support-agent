@@ -1,0 +1,21 @@
+# Environment variables
+.env
+.env.example
+
+# Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Application Logs
+app.log
+*.log
+
+# Databases
+chroma_db/
+*.sqlite3

@@ -32,7 +32,11 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # ==========================================
 # 1. CONFIGURATION SECTION
 # ==========================================
+from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parent
+load_dotenv(dotenv_path=PROJECT_ROOT / ".env")
+load_dotenv()
+
 DATA_DIR = PROJECT_ROOT / "data"
 CHROMA_DB_PATH = PROJECT_ROOT / "chroma_db"
 
@@ -235,10 +239,10 @@ class LocalRAGPipeline:
     def __init__(self, db_dir: str = str(CHROMA_DB_PATH)):
         self.db_dir = db_dir
         self.offline_mode = not bool(GEMINI_API_KEY)
+        self.offline_chunks: List[Dict[str, Any]] = []
         
         if self.offline_mode:
             logger.warning("GEMINI_API_KEY is missing. RAG pipeline initialized in OFFLINE fallback mode.")
-            self.offline_chunks: List[Dict[str, Any]] = []
             return
             
         logger.info(f"Initializing persistent ChromaDB client at: {db_dir}")
@@ -277,15 +281,17 @@ class LocalRAGPipeline:
         splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=40)
         chunks = splitter.split_text(content)
 
+        # Always populate offline cache so we have fallback capability if Chroma DB query fails
+        self.offline_chunks = [c for c in self.offline_chunks if c["source"] != filename]
+        for idx, chunk in enumerate(chunks):
+            self.offline_chunks.append({
+                "text": chunk,
+                "source": filename,
+                "chunk_index": idx,
+                "last_modified": mtime
+            })
+
         if self.offline_mode:
-            self.offline_chunks = [c for c in self.offline_chunks if c["source"] != filename]
-            for idx, chunk in enumerate(chunks):
-                self.offline_chunks.append({
-                    "text": chunk,
-                    "source": filename,
-                    "chunk_index": idx,
-                    "last_modified": mtime
-                })
             return True
 
         try:
@@ -325,24 +331,7 @@ class LocalRAGPipeline:
     def retrieve_context(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
         """Performs semantic similarity search (Online) or word-overlap keyword matching (Offline)."""
         if self.offline_mode:
-            query_words = set(query.lower().split())
-            stopwords = {"the", "a", "an", "is", "are", "of", "to", "in", "for", "on", "with", "at", "it", "this", "that", "your", "my"}
-            query_words = {w for w in query_words if len(w) > 2 and w not in stopwords}
-            matches = []
-            for chunk in self.offline_chunks:
-                chunk_words = set(chunk["text"].lower().split())
-                intersection = query_words.intersection(chunk_words)
-                score = 0.10
-                if query_words:
-                    overlap_ratio = len(intersection) / len(query_words)
-                    score = round(0.40 + 0.55 * overlap_ratio, 4) if overlap_ratio > 0 else 0.10
-                matches.append({
-                    "text": chunk["text"],
-                    "source": chunk["source"],
-                    "score": score
-                })
-            matches.sort(key=lambda x: x["score"], reverse=True)
-            return matches[:top_k]
+            return self._retrieve_offline(query, top_k)
 
         try:
             results = self.collection.query(query_texts=[query], n_results=top_k)
@@ -360,8 +349,28 @@ class LocalRAGPipeline:
                     })
             return retrieved_chunks
         except Exception as e:
-            logger.error(f"Error querying Chroma DB: {e}")
-            return []
+            logger.error(f"Error querying Chroma DB: {e}. Falling back to offline context retrieval.")
+            return self._retrieve_offline(query, top_k)
+
+    def _retrieve_offline(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
+        query_words = set(query.lower().split())
+        stopwords = {"the", "a", "an", "is", "are", "of", "to", "in", "for", "on", "with", "at", "it", "this", "that", "your", "my"}
+        query_words = {w for w in query_words if len(w) > 2 and w not in stopwords}
+        matches = []
+        for chunk in self.offline_chunks:
+            chunk_words = set(chunk["text"].lower().split())
+            intersection = query_words.intersection(chunk_words)
+            score = 0.10
+            if query_words:
+                overlap_ratio = len(intersection) / len(query_words)
+                score = round(0.40 + 0.55 * overlap_ratio, 4) if overlap_ratio > 0 else 0.10
+            matches.append({
+                "text": chunk["text"],
+                "source": chunk["source"],
+                "score": score
+            })
+        matches.sort(key=lambda x: x["score"], reverse=True)
+        return matches[:top_k]
 
 # ==========================================
 # 5. ESCALATION ENGINE SECTION
